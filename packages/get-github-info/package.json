@@ -20,10 +20,16 @@
   "repository": "https://github.com/changesets/changesets/tree/main/packages/get-github-info",
   "dependencies": {
     "dataloader": "^1.4.0",
-    "node-fetch": "^2.5.0"
+    "node-fetch": "^2.5.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "nock": "^11.7.0",
     "prettier": "^2.7.1"
-  }
+  },
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
